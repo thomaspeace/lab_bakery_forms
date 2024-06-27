@@ -5,8 +5,6 @@ import Search from "./Search";
 import CakeForm from "./CakeForm";
 import { useState } from "react";
 
-
-
 function App() {
 
   const [cakes, setCakes] = useState([
@@ -32,6 +30,10 @@ function App() {
       }
   ])
 
+  const handleNewCake = (newCake) => {
+    setCakes([newCake], ...cakes)
+  }
+
   return (
     <>
       <header>
@@ -41,7 +43,7 @@ function App() {
       <main>
         <RecipeList cakes={cakes}/>
         <Search />
-        <CakeForm />
+        <CakeForm createCake={handleNewCake}/>
       </main>
     </>
   );

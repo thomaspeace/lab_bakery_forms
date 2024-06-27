@@ -6,3 +6,9 @@ the data isn't currently stored as a state, just data
 2
 imported App to RecipeList
 pass {cakes} to RecipeList in App
+
+3 (setting up form)
+add states in form for cakeName, ingredients and rating
+create handleSubmit fn and add it to onSubmit in form
+had to create handleCake as we can't access setCakes from CakeForm. handleCake is defined in App.jsx, so we write it there
+added logic to split ingredient string by "," and trim().
