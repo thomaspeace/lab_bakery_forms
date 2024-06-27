@@ -1,0 +1,8 @@
+1
+remove the data from RecipeList and add it to a service in App
+this is because CakeForm will need to access and modify the data, so it must be in a parent of both RecipeList and CakeForm
+the data isn't currently stored as a state, just data
+
+2
+imported App to RecipeList
+pass {cakes} to RecipeList in App
