@@ -1,0 +1,3 @@
+1.
+take data out of the array and place it in a state.
+the state will go within app as the state will be accessed in multiple places and we need to put it in the parent of the components accessing it.
