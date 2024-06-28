@@ -38,9 +38,10 @@ function App() {
         <Title />
       </header>
       <main>
-        <RecipeList />
+        {/* passing cakeList as a prop */}
+        <RecipeList cakeList={cakes}/> 
         <Search />
-        <CakeForm />
+        <CakeForm cakeList={cakes} setCakes={setCakes}/>
       </main>
     </>
   );

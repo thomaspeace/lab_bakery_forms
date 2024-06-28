@@ -1,3 +1,11 @@
 1.
 take data out of the array and place it in a state.
 the state will go within app as the state will be accessed in multiple places and we need to put it in the parent of the components accessing it.
+we will need to pass the cakes as a prop to RecipeList now. put cakeList={cakes} in App.jsx for RecipeList and {cakeList} as an arguement in RecipeList
+
+2.
+add components states to cakeform
+link the inputs to the states
+add onSubmit to the form
+add props for cakeList and setCake to App.jsx
+create handleSubmit, make sure to make the object newCake using cakeName : cakeNameTrim etc...
