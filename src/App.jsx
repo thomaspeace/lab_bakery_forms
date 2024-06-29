@@ -40,7 +40,7 @@ function App() {
       <main>
         {/* passing cakeList as a prop */}
         <RecipeList cakeList={cakes}/> 
-        <Search />
+        <Search cakeList={cakes}/>
         <CakeForm cakeList={cakes} setCakes={setCakes}/>
       </main>
     </>
