@@ -7,9 +7,6 @@ const Search = ({ cakeList }) => {
 
     const filterCakes = (e) => {
 
-        if(searchTerm === ""){
-            setFilteredCakes(null)
-        }
         e.preventDefault()
         const searchTermLower = searchTerm.toLowerCase()
         const filteredCakeList = cakeList.filter((cake) => cake.cakeName.toLowerCase().includes(searchTermLower))
@@ -26,16 +23,17 @@ const Search = ({ cakeList }) => {
             </form>
             <section>
                 <h4>Filtered Cakes: {searchTerm}</h4>
-                {filteredCakes.map((cake, index) => (
-                    <div key={index}>
-                        <h3>{cake.cakeName}</h3>
-                        <ul>
-                            {cake.ingredients.map((ingredient, idx) => (
-                                <li key={idx}>{ingredient}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+                    {filteredCakes.map((cake, index) => (
+
+                        <div key={index}>
+                            <h3>{cake.cakeName}</h3>
+                            <ul>
+                                {cake.ingredients.map((ingredient, idx) => (
+                                    <li key={idx}>{ingredient}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
             </section>
         </>
         
